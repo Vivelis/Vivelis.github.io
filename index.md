@@ -8,4 +8,4 @@ I introduce myself, my name is Macéo JALBERT and I am a young computer science 
 * [Github](https://github.com/macgameur)
 
 ## My Resume :
-![Resume](CV-Macéo-JALBERT.png)
+[![Resume](/assets/pictures/CV-Macéo-JALBERT.png)](https://www.canva.com/design/DAE1uEZvuM4/vuSv0uY7nuWMVtIGjHC-7w/view?utm_content=DAE1uEZvuM4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
