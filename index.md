@@ -29,7 +29,7 @@ The pitch :
 You see in the new that you have the last cup of coffee on the earth.  
 Now you need to escape a hord of of people craving caffeine !
 
-#### C Programing
+### C Programing
 #### [LibMy](https://github.com/macgameur/libmy)
 A big part of the C standard library, whriten by me for use in Epitech projects.
 #### [QCSLib](https://github.com/macgameur/QCS-lib)
