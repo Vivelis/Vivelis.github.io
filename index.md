@@ -12,7 +12,7 @@ I introduce myself, my name is Macéo JALBERT and I am a young computer science 
 * [Github](https://github.com/macgameur)
 
 ## My Resume
-[![CV Macéo JALBERT 2023](https://user-images.githubusercontent.com/42516894/217206676-c5f79072-9c64-45b9-940b-d57e28a5fb52.jpg)](https://github.com/macgameur/macgameur.github.io/files/10673373/CV.Maceo.JALBERT.2023.pdf)
+[![CV Macéo JALBERT 2023](https://user-images.githubusercontent.com/42516894/217215171-7f677b69-723e-4f71-826a-8bce0b4a7b20.jpg)](https://github.com/macgameur/macgameur.github.io/files/10673843/CV.Maceo.JALBERT.2023.pdf)
 
 ## My projects
 ### Games
