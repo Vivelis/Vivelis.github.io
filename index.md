@@ -1,9 +1,9 @@
 # Welcome to my Portfolio !
 
-I introduce myself, my name is Macéo JALBERT and I am a young computer science student.
-I am passionate about computers and new technologies.
-Since I was little, I like to understand how everything around me works. It is with this curiosity that I fell on computer science.
-It is an incredible universe full of resources, it allows you to create what you want as long as you know where to look and that you are persistent.
+I introduce myself, my name is Macéo JALBERT and I am a young computer science student.  
+I am passionate about computers and new technologies.  
+Since I was little, I like to understand how everything around me works. It is with this curiosity that I fell on computer science.  
+It is an incredible universe full of resources, it allows you to create what you want as long as you know where to look and that you are persistent.  
 
 ## Index
 * [Links](#links)
