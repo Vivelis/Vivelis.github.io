@@ -3,9 +3,9 @@
 I introduce myself, my name is Macéo JALBERT and I am a young computer science student.
 
 ## Index :
-* [Links](#links)
-* [Resume](#my-resume)
-* [Projects](#my-projects)
+* [Links](links)
+* [Resume](my-resume)
+* [Projects](my-projects)
 
 ## Links :
 * [My Resume](https://www.canva.com/design/DAE1uEZvuM4/vuSv0uY7nuWMVtIGjHC-7w/view?utm_content=DAE1uEZvuM4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
