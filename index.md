@@ -2,20 +2,20 @@
 
 I introduce myself, my name is Macéo JALBERT and I am a young computer science student.
 
-## Index :
-* [Links](#links-)
-* [Resume](#my-resume-)
-* [Projects](#my-projects-)
+## Index
+* [Links](#links)
+* [Resume](#my-resume)
+* [Projects](#my-projects)
 
-## Links :
+## Links
 * [My Resume](https://www.canva.com/design/DAE1uEZvuM4/vuSv0uY7nuWMVtIGjHC-7w/view?utm_content=DAE1uEZvuM4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 * [Linkedin](https://www.linkedin.com/in/mac%C3%A9o-jalbert-200025222/)
 * [Github](https://github.com/macgameur)
 
-## My Resume :
+## My Resume
 [CV Macéo JALBERT 2023.pdf](https://github.com/macgameur/macgameur.github.io/files/10673373/CV.Maceo.JALBERT.2023.pdf)
 
-## My projects :
+## My projects
 ### Games
 #### [MyRPG](https://github.com/macgameur/Epitech-project-RPG/blob/main/README.md)
 A small RPG game made in C with the CSFML library.
