@@ -5,18 +5,25 @@ I am passionate about computers and new technologies.
 Since I was little, I like to understand how everything around me works. It is with this curiosity that I fell on computer science.  
 It is an incredible universe full of resources, it allows you to create what you want as long as you know where to look and that you are persistent.  
 
+---
+
 ## Index
 * [Links](#links)
 * [Resume](#my-resume)
 * [Projects](#my-projects)
 
+---
+
 ## Links
 * [Linkedin](https://www.linkedin.com/in/mac%C3%A9o-jalbert-200025222/)
 * [Github](https://github.com/macgameur)
 
+---
+
 ## My Resume
 [![CV Macéo JALBERT 2023](https://github.com/Vivelis/Vivelis.github.io/assets/42516894/910b5e8a-e796-4677-b860-c627373bcb5b)](https://github.com/Vivelis/Vivelis.github.io/files/11625144/CV.Maceo.JALBERT.2023.pdf)
 
+---
 
 ## My projects
 ### Games
@@ -31,6 +38,8 @@ A personal project game.
 The pitch :  
 You see in the new that you have the last cup of coffee on the earth.  
 Now you need to escape a hord of of people craving caffeine !
+
+---
 
 ### C Programing
 #### [LibMy](https://github.com/macgameur/libmy)
