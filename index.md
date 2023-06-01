@@ -16,7 +16,7 @@ It is an incredible universe full of resources, it allows you to create what you
 
 ## Links
 * [Linkedin](https://www.linkedin.com/in/mac%C3%A9o-jalbert-200025222/)
-* [Github](https://github.com/macgameur)
+* [Github](https://github.com/vivelis)
 
 ---
 
@@ -27,13 +27,13 @@ It is an incredible universe full of resources, it allows you to create what you
 
 ## My projects
 ### Games
-#### [MyRPG](https://github.com/macgameur/Epitech-project-RPG/blob/main/README.md)
+#### [MyRPG](https://github.com/Vivelis/Epitech-project-RPG/blob/main/README.md)
 A small RPG game made in C with the CSFML library.
-#### [Global Game Jam 2023 (FollowTheRoots)](https://github.com/macgameur/FollowTheRoots)
+#### [Global Game Jam 2023 (FollowTheRoots)](https://github.com/Vivelis/FollowTheRoots)
 A small platformer game made for the Global Game Jam 2023.
-#### [Global Game Jam 2022](https://github.com/macgameur/Game-Jam-2022-epitech-Toulouse/blob/main/README.md)
+#### [Global Game Jam 2022](https://github.com/Vivelis/Game-Jam-2022-epitech-Toulouse/blob/main/README.md)
 A small 2D game made for the Global Game Jam 2022.
-#### [TheLastCoffee](https://github.com/macgameur/The-Last-Coffee)
+#### [TheLastCoffee](https://github.com/Vivelis/The-Last-Coffee)
 A personal project game.
 The pitch :  
 You see in the new that you have the last cup of coffee on the earth.  
@@ -42,9 +42,9 @@ Now you need to escape a hord of of people craving caffeine !
 ---
 
 ### C Programing
-#### [LibMy](https://github.com/macgameur/libmy)
+#### [LibMy](https://github.com/Vivelis/libmy)
 A big part of the C standard library, whriten by me for use in Epitech projects.
-#### [QCSLib](https://github.com/macgameur/QCS-lib)
+#### [QCSLib](https://github.com/Vivelis/QCS-lib)
 A library with linked lists and their variants made in C.
-#### [StarterC](https://github.com/macgameur/starter-c)
+#### [StarterC](https://github.com/Vivelis/starter-c)
 An installation program to begin a new C Epitech project.
