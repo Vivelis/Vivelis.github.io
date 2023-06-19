@@ -43,7 +43,7 @@ Now you need to escape a hord of of people craving caffeine !
 
 ### C Programing
 #### [LibMy](https://github.com/Vivelis/libmy)
-A big part of the C standard library, whriten by me for use in Epitech projects.
+A big part of the C standard library, written by me for use in Epitech projects.
 #### [QCSLib](https://github.com/Vivelis/QCS-lib)
 A library with linked lists and their variants made in C.
 #### [StarterC](https://github.com/Vivelis/starter-c)
