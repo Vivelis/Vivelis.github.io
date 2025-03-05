@@ -4,10 +4,10 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 </script>
 
 <template>
+  <Analytics />
+  <SpeedInsights />
   <div>
     <!-- Markup shared across all pages, ex: NavBar -->
-    <Analytics />
-    <SpeedInsights />
     <NuxtPage />
   </div>
 </template>
