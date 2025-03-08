@@ -1,13 +1,13 @@
 {
-    "id": "",
+    "id": "typescript",
     "image": "",
-    "link": "",
+    "link": "https://www.typescriptlang.org/",
     "en": {
-        "title": "",
+        "title": "TypeScript",
         "description": ""
     },
     "fr": {
-        "title": "",
+        "title": "TypeScript",
         "description": ""
     }
 }

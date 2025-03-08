@@ -1,13 +1,13 @@
 {
-    "id": "",
+    "id": "nuxt",
     "image": "",
-    "link": "",
+    "link": "https://nuxt.com/",
     "en": {
-        "title": "",
+        "title": "Nuxt",
         "description": ""
     },
     "fr": {
-        "title": "",
+        "title": "Nuxt",
         "description": ""
     }
 }

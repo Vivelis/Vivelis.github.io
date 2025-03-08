@@ -1,13 +1,13 @@
 {
-    "id": "",
+    "id": "godot",
     "image": "",
-    "link": "",
+    "link": "https://godotengine.org/",
     "en": {
-        "title": "",
+        "title": "Godot Engine",
         "description": ""
     },
     "fr": {
-        "title": "",
+        "title": "Godot",
         "description": ""
     }
 }

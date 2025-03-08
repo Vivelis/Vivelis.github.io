@@ -1,13 +1,13 @@
 {
-    "id": "",
+    "id": "angular",
     "image": "",
-    "link": "",
+    "link": "https://angular.dev/",
     "en": {
-        "title": "",
+        "title": "Angular",
         "description": ""
     },
     "fr": {
-        "title": "",
+        "title": "Angular",
         "description": ""
     }
 }

@@ -1,13 +1,13 @@
 {
-    "id": "",
+    "id": "jest",
     "image": "",
-    "link": "",
+    "link": "https://jestjs.io/",
     "en": {
-        "title": "",
+        "title": "Jest",
         "description": ""
     },
     "fr": {
-        "title": "",
+        "title": "Jest",
         "description": ""
     }
 }
