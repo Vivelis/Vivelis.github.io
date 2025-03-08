@@ -1,0 +1,16 @@
+{
+    "en": {
+        "id": "junqo",
+        "title": "Junqo",
+        "description": "Junqo is a multi-platform solution designed to help young people find internships and work-study programs.",
+        "image": "",
+        "link": "https://github.com/Junqo-org/junqo-platform"
+    },
+    "fr": {
+        "id": "junqo",
+        "title": "Junqo",
+        "description": "Junqo est une solution multiplateforme conçue pour aider les jeunes à trouver des stages et des contrats en alternance.",
+        "image": "",
+        "link": "https://github.com/Junqo-org/junqo-platform"
+    }
+}

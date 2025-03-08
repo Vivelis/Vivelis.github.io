@@ -1,0 +1,16 @@
+{
+    "en": {
+        "id": "lib-my",
+        "title": "Lib My",
+        "description": "A big part of the C standard library, written by me for use in Epitech projects.",
+        "image": "",
+        "link": "https://github.com/Vivelis/libmy"
+    },
+    "fr": {
+        "id": "lib-my",
+        "title": "Lib My",
+        "description": "Une grande partie de la bibliothèque standard du C, écrite par moi pour être utilisée dans les projets Epitech.",
+        "image": "",
+        "link": "https://github.com/Vivelis/libmy"
+    }
+}
