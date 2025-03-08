@@ -1,16 +1,13 @@
 {
+    "id": "starter-c",
+    "image": "",
+    "link": "https://github.com/Vivelis/starter-c",
     "en": {
-        "id": "starter-c",
         "title": "StarterC",
-        "description": "An installation program to begin a new C Epitech project.",
-        "image": "",
-        "link": "https://github.com/Vivelis/starter-c"
+        "description": "An installation program to begin a new C Epitech project."
     },
     "fr": {
-        "id": "starter-c",
         "title": "StarterC",
-        "description": "Un programme d'installation pour démarrer un nouveau projet C chez Epitech.",
-        "image": "",
-        "link": "https://github.com/Vivelis/starter-c"
+        "description": "Un programme d'installation pour démarrer un nouveau projet C chez Epitech."
     }
 }

@@ -5,39 +5,33 @@ export default defineContentConfig({
       type: "data",
       source: "projects/*.json",
       schema: z.object({
+        id: z.string(),
+        image: z.string().optional(),
+        link: z.string().url(),
         en: z.object({
-          id: z.string(),
           title: z.string(),
           description: z.string(),
-          image: z.string().optional(),
-          link: z.string().url(),
         }),
         fr: z.object({
-          id: z.string(),
           title: z.string(),
           description: z.string(),
-          image: z.string().optional(),
-          link: z.string().url(),
         }),
       }),
     }),
-    technos: defineCollection({
+    technologies: defineCollection({
       type: "data",
-      source: "technos/*.json",
+      source: "technologies/*.json",
       schema: z.object({
+        id: z.string(),
+        image: z.string().optional(),
+        link: z.string().url(),
         en: z.object({
-          id: z.string(),
           title: z.string(),
           description: z.string(),
-          image: z.string().optional(),
-          link: z.string().url(),
         }),
         fr: z.object({
-          id: z.string(),
           title: z.string(),
           description: z.string(),
-          image: z.string().optional(),
-          link: z.string().url(),
         }),
       }),
     }),

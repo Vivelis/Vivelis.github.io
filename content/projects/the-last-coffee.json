@@ -1,16 +1,13 @@
 {
+    "id": "the-last-coffee",
+    "image": "",
+    "link": "https://github.com/Vivelis/The-Last-Coffee",
     "en": {
-        "id": "the-last-coffee",
         "title": "TheLastCoffee",
-        "description": "A personal project game.\nThe pitch :\nYou see in the new that you have the last cup of coffee on the earth.\nNow you need to escape a hord of of people craving caffeine !",
-        "image": "",
-        "link": "https://github.com/Vivelis/The-Last-Coffee"
+        "description": "A personal project game.\nThe pitch :\nYou see in the new that you have the last cup of coffee on the earth.\nNow you need to escape a hord of of people craving caffeine !"
     },
     "fr": {
-        "id": "the-last-coffee",
         "title": "TheLastCoffee",
-        "description": "Un jeu personnel.\nLe pitch :\nVous voyez aux infos que vous avez la dernière tasse de café sur Terre.\nMaintenant, vous devez échapper à une horde de personnes en manque de caféine !",
-        "image": "",
-        "link": "https://github.com/Vivelis/The-Last-Coffee"
+        "description": "Un jeu personnel.\nLe pitch :\nVous voyez aux infos que vous avez la dernière tasse de café sur Terre.\nMaintenant, vous devez échapper à une horde de personnes en manque de caféine !"
     }
 }

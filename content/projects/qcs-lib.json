@@ -1,16 +1,13 @@
 {
+    "id": "qcs-lib",
+    "image": "",
+    "link": "https://github.com/Vivelis/QCS-lib",
     "en": {
-        "id": "qcs-lib",
         "title": "QCS Lib",
-        "description": "A library with linked lists and their variants made in C.",
-        "image": "",
-        "link": "https://github.com/Vivelis/QCS-lib"
+        "description": "A library with linked lists and their variants made in C."
     },
     "fr": {
-        "id": "qcs-lib",
         "title": "QCS Lib",
-        "description": "Une bibliothèque avec des listes chaînées et leurs variantes, réalisée en C.",
-        "image": "",
-        "link": "https://github.com/Vivelis/QCS-lib"
+        "description": "Une bibliothèque avec des listes chaînées et leurs variantes, réalisée en C."
     }
 }

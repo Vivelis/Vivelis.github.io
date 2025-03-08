@@ -1,14 +1,13 @@
 {
+    "id": "my-rpg",
+    "image": "",
+    "link": "https://github.com/Vivelis/Epitech-project-RPG/blob/main/README.md",
     "en": {
-        "id": "my-rpg",
         "title": "MyRPG",
-        "description": "A small RPG game made in C with the CSFML library.",
-        "link": "https://github.com/Vivelis/Epitech-project-RPG/blob/main/README.md"
+        "description": "A small RPG game made in C with the CSFML library."
     },
     "fr": {
-        "id": "my-rpg",
         "title": "MyRPG",
-        "description": "Un petit jeu RPG réalisé en C avec la bibliothèque CSFML.",
-        "link": "https://github.com/Vivelis/Epitech-project-RPG/blob/main/README.md"
+        "description": "Un petit jeu RPG réalisé en C avec la bibliothèque CSFML."
     }
 }

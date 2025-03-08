@@ -1,16 +1,13 @@
 {
+    "id": "ggj-2022",
+    "image": "",
+    "link": "https://github.com/Vivelis/Game-Jam-2022-epitech-Toulouse/blob/main/README.md",
     "en": {
-        "id": "ggj-2022",
         "title": "Global Game Jam 2022",
-        "description": "A small 2D game made for the Global Game Jam 2022.",
-        "image": "",
-        "link": "https://github.com/Vivelis/Game-Jam-2022-epitech-Toulouse/blob/main/README.md"
+        "description": "A small 2D game made for the Global Game Jam 2022."
     },
     "fr": {
-        "id": "ggj-2022",
         "title": "Global Game Jam 2022",
-        "description": "Un petit jeu 2D réalisé pour la Global Game Jam 2022.",
-        "image": "",
-        "link": "https://github.com/Vivelis/Game-Jam-2022-epitech-Toulouse/blob/main/README.md"
+        "description": "Un petit jeu 2D réalisé pour la Global Game Jam 2022."
     }
 }

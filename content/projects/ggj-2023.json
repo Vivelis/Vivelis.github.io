@@ -1,16 +1,13 @@
 {
+    "id": "ggj-2023",
+    "image": "",
+    "link": "https://github.com/Vivelis/FollowTheRoots",
     "en": {
-        "id": "ggj-2023",
         "title": "Global Game Jam 2023 (FollowTheRoots)",
-        "description": "A small platformer game made for the Global Game Jam 2023.",
-        "image": "",
-        "link": "https://github.com/Vivelis/FollowTheRoots"
+        "description": "A small platformer game made for the Global Game Jam 2023."
     },
     "fr": {
-        "id": "ggj-2023",
         "title": "Global Game Jam 2023 (FollowTheRoots)",
-        "description": "Un petit jeu de plateforme réalisé pour la Global Game Jam 2023.",
-        "image": "",
-        "link": "https://github.com/Vivelis/FollowTheRoots"
+        "description": "Un petit jeu de plateforme réalisé pour la Global Game Jam 2023."
     }
 }
