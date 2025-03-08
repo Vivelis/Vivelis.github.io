@@ -7,7 +7,7 @@ const { data: technologies } = await useAsyncData('technologies', () =>
 </script>
 
 <template>
-  <section class="technologies w-1/2">
+  <section class="technologies w-full sm:w-3/4 md:w-1/2 px-10 md:px-0 mx-auto">
     <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl font-bold text-primary mb-6 py-1">{{
       $t('technologies-component-title') }}</h2>
     <div v-for="project in technologies" :key="project.id"

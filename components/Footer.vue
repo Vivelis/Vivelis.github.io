@@ -8,7 +8,7 @@ const socialLinks = ref([
 </script>
 
 <template>
-  <footer class="footer py-10">
+  <footer class="footer pt-10">
     <p class="text-center text-secondary">
       &copy; {{ new Date().getFullYear() }} {{ $t('footer-component-title') }}
     </p>
