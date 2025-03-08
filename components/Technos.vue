@@ -13,7 +13,7 @@ const { data: technos } = await useAsyncData('technos', () =>
       <h2 class="text-2xl font-bold mb-2 mt-4">{{ techno[locale].title }}</h2>
       <p>{{ techno[locale].description }}</p>
       <img class="" :src="techno[locale].image" />
-      <a :href="techno[locale].link" class="bg-secondary py-1 px-3 border border-inherit rounded-lg inline-block mt-4">View Techno</a>
+      <a :href="techno[locale].link" class="bg-secondary py-1 px-3 border border-inherit rounded-lg inline-block mt-4">{{ $t('technos-component-link') }}</a>
     </div>
   </section>
 </template>
