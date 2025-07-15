@@ -1,0 +1,13 @@
+{
+    "id": "kubernetes",
+    "image": "/logos/kubernetes.svg",
+    "link": "https://kubernetes.io/",
+    "en": {
+        "title": "Kubernetes",
+        "description": "An open-source container orchestration platform that automates deployment, scaling, and management of containerized applications."
+    },
+    "fr": {
+        "title": "Kubernetes",
+        "description": "Une plateforme d'orchestration de conteneurs open-source qui automatise le déploiement, la mise à l'échelle et la gestion d'applications conteneurisées."
+    }
+}

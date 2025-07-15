@@ -20,8 +20,8 @@ const { data: projects } = await useAsyncData('projects', () =>
               <h3 class="text-xl font-semibold text-heading mb-3">{{ project[locale].title }}</h3>
               <p class="text-secondary mb-4 leading-relaxed">{{ project[locale].description }}</p>
               <div v-if="project.image" class="mb-4 overflow-hidden rounded-lg">
-                <img 
-                  :src="project.image" 
+                <img
+                  :src="project.image"
                   :alt="project[locale].title"
                   class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />

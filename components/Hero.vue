@@ -14,5 +14,6 @@
 <style scoped>
 .hero {
   background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+  border-radius: 1rem;
 }
 </style>

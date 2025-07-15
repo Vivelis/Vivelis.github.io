@@ -18,8 +18,8 @@ const { data: technologies } = await useAsyncData('technologies', () =>
           <div class="flex flex-col h-full">
             <div class="flex-1">
               <div v-if="technology.image" class="mb-4 flex justify-center">
-                <img 
-                  :src="technology.image" 
+                <img
+                  :src="technology.image"
                   :alt="technology[locale].title"
                   class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
                 />

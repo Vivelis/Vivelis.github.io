@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="starter-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e"/>
+      <stop offset="100%" style="stop-color:#313244"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#starter-bg)" rx="12"/>
+  
+  <!-- Terminal Window -->
+  <rect x="30" y="30" width="340" height="240" fill="#181825" rx="8" stroke="#45475a" stroke-width="2"/>
+  
+  <!-- Terminal Header -->
+  <rect x="30" y="30" width="340" height="30" fill="#313244" rx="8"/>
+  <rect x="30" y="45" width="340" height="15" fill="#313244"/>
+  
+  <!-- Traffic light buttons -->
+  <circle cx="50" cy="45" r="6" fill="#f38ba8"/>
+  <circle cx="70" cy="45" r="6" fill="#f9e2af"/>
+  <circle cx="90" cy="45" r="6" fill="#a6e3a1"/>
+  
+  <!-- Terminal title -->
+  <text x="200" y="50" fill="#cdd6f4" font-family="Courier New, monospace" font-size="12" text-anchor="middle">StarterC - Project Initializer</text>
+  
+  <!-- Terminal Content -->
+  <text x="40" y="85" fill="#94e2d5" font-family="Courier New, monospace" font-size="11">$ starter-c my_project</text>
+  
+  <text x="40" y="105" fill="#cdd6f4" font-family="Courier New, monospace" font-size="10">Creating new C project: my_project</text>
+  
+  <text x="40" y="125" fill="#a6e3a1" font-family="Courier New, monospace" font-size="10">✓ Creating project directory</text>
+  <text x="40" y="140" fill="#a6e3a1" font-family="Courier New, monospace" font-size="10">✓ Setting up Makefile</text>
+  <text x="40" y="155" fill="#a6e3a1" font-family="Courier New, monospace" font-size="10">✓ Initializing source files</text>
+  <text x="40" y="170" fill="#a6e3a1" font-family="Courier New, monospace" font-size="10">✓ Creating include headers</text>
+  <text x="40" y="185" fill="#a6e3a1" font-family="Courier New, monospace" font-size="10">✓ Setting up lib directory</text>
+  
+  <!-- Progress bar -->
+  <rect x="40" y="200" width="200" height="8" fill="#45475a" rx="4"/>
+  <rect x="40" y="200" width="160" height="8" fill="#94e2d5" rx="4"/>
+  <text x="250" y="208" fill="#cdd6f4" font-family="Courier New, monospace" font-size="10">80%</text>
+  
+  <text x="40" y="230" fill="#f9e2af" font-family="Courier New, monospace" font-size="10">Setting up project structure...</text>
+  
+  <!-- File structure visualization -->
+  <rect x="280" y="80" width="80" height="120" fill="#45475a" rx="4"/>
+  <text x="320" y="95" fill="#cdd6f4" font-family="Courier New, monospace" font-size="9" text-anchor="middle">Project Tree</text>
+  
+  <!-- Folder structure -->
+  <text x="290" y="110" fill="#f9e2af" font-family="Courier New, monospace" font-size="8">📁 my_project/</text>
+  <text x="295" y="125" fill="#89b4fa" font-family="Courier New, monospace" font-size="8">📄 Makefile</text>
+  <text x="295" y="135" fill="#89b4fa" font-family="Courier New, monospace" font-size="8">📄 main.c</text>
+  <text x="295" y="145" fill="#f9e2af" font-family="Courier New, monospace" font-size="8">📁 include/</text>
+  <text x="295" y="155" fill="#f9e2af" font-family="Courier New, monospace" font-size="8">📁 lib/</text>
+  <text x="295" y="165" fill="#f9e2af" font-family="Courier New, monospace" font-size="8">📁 src/</text>
+  <text x="295" y="175" fill="#f9e2af" font-family="Courier New, monospace" font-size="8">📁 tests/</text>
+  
+  <!-- Command prompt -->
+  <text x="40" y="250" fill="#94e2d5" font-family="Courier New, monospace" font-size="10">$</text>
+  <rect x="50" y="245" width="8" height="10" fill="#cdd6f4"/>
+</svg>

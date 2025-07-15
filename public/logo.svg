@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#94e2d5"/>
+      <stop offset="50%" style="stop-color:#89dceb"/>
+      <stop offset="100%" style="stop-color:#b4befe"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="25" fill="#313244" stroke="url(#logo-gradient)" stroke-width="2"/>
+  
+  <!-- Code brackets -->
+  <path d="M20,20 L15,30 L20,40" stroke="url(#logo-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M40,20 L45,30 L40,40" stroke="url(#logo-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Center dot -->
+  <circle cx="30" cy="30" r="3" fill="url(#logo-gradient)"/>
+  
+  <!-- Text -->
+  <text x="70" y="25" fill="#cdd6f4" font-family="Arial, sans-serif" font-size="18" font-weight="700">Macéo</text>
+  <text x="70" y="42" fill="#94e2d5" font-family="Arial, sans-serif" font-size="12" font-weight="500">Developer</text>
+</svg>

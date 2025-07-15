@@ -1,0 +1,13 @@
+{
+    "id": "nestjs",
+    "image": "/logos/nestjs.svg",
+    "link": "https://nestjs.com/",
+    "en": {
+        "title": "NestJS",
+        "description": "A progressive Node.js framework for building efficient, reliable and scalable server-side applications with TypeScript."
+    },
+    "fr": {
+        "title": "NestJS",
+        "description": "Un framework Node.js progressif pour construire des applications côté serveur efficaces, fiables et évolutives avec TypeScript."
+    }
+}

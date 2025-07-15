@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="favicon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#94e2d5"/>
+      <stop offset="50%" style="stop-color:#89dceb"/>
+      <stop offset="100%" style="stop-color:#b4befe"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="60" height="60" fill="#1e1e2e" rx="12"/>
+  
+  <!-- Main circle -->
+  <circle cx="30" cy="30" r="20" fill="#313244" stroke="url(#favicon-gradient)" stroke-width="2"/>
+  
+  <!-- Code brackets -->
+  <path d="M20,20 L15,30 L20,40" stroke="url(#favicon-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M40,20 L45,30 L40,40" stroke="url(#favicon-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Center dot -->
+  <circle cx="30" cy="30" r="3" fill="url(#favicon-gradient)"/>
+  
+  <!-- Initial "M" -->
+  <text x="30" y="50" fill="#94e2d5" font-family="Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">M</text>
+</svg>
