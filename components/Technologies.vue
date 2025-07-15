@@ -7,16 +7,34 @@ const { data: technologies } = await useAsyncData('technologies', () =>
 </script>
 
 <template>
-  <section class="technologies w-full sm:w-3/4 md:w-1/2 px-10 md:px-0 mx-auto">
-    <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl font-bold text-primary mb-6 py-1">{{
-      $t('technologies-component-title') }}</h2>
-    <div v-for="project in technologies" :key="project.id"
-      class="animate__animated animate__fadeInLeft animate__delay-3s project-card">
-      <h2 class="text-2xl font-bold mb-2 mt-4">{{ project[locale].title }}</h2>
-      <p>{{ project[locale].description }}</p>
-      <img class="" :src="project.image" />
-      <a :href="project.link" class="bg-secondary py-1 px-3 border border-inherit rounded-lg inline-block mt-4">{{
-        $t('technologies-component-link') }}</a>
+  <section class="technologies px-6 py-16">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl md:text-4xl font-bold text-heading mb-12 text-center">
+        {{ $t('technologies-component-title') }}
+      </h2>
+      <div class="grid-auto-fill">
+        <div v-for="technology in technologies" :key="technology.id"
+          class="animate__animated animate__fadeInLeft animate__delay-3s card group text-center">
+          <div class="flex flex-col h-full">
+            <div class="flex-1">
+              <div v-if="technology.image" class="mb-4 flex justify-center">
+                <img 
+                  :src="technology.image" 
+                  :alt="technology[locale].title"
+                  class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3 class="text-lg font-semibold text-heading mb-3">{{ technology[locale].title }}</h3>
+              <p class="text-secondary text-sm leading-relaxed">{{ technology[locale].description }}</p>
+            </div>
+            <div class="mt-auto pt-4">
+              <a :href="technology.link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-sm">
+                {{ $t('technologies-component-link') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>

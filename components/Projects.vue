@@ -7,16 +7,34 @@ const { data: projects } = await useAsyncData('projects', () =>
 </script>
 
 <template>
-  <section class="projects w-full sm:w-3/4 md:w-1/2 px-10 md:px-0 mx-auto">
-    <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl font-bold text-primary mb-6 py-1">{{
-      $t('projects-component-title') }}</h2>
-    <div v-for="project in projects" :key="project.id"
-      class="animate__animated animate__fadeInLeft animate__delay-3s project-card">
-      <h2 class="text-2xl font-bold mb-2 mt-4">{{ project[locale].title }}</h2>
-      <p>{{ project[locale].description }}</p>
-      <img class="" :src="project.image" />
-      <a :href="project.link" class="bg-secondary py-1 px-3 border border-inherit rounded-lg inline-block mt-4">{{
-        $t('technologies-component-link') }}</a>
+  <section class="projects px-6 py-16">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl md:text-4xl font-bold text-heading mb-12 text-center">
+        {{ $t('projects-component-title') }}
+      </h2>
+      <div class="grid-auto-fit">
+        <div v-for="project in projects" :key="project.id"
+          class="animate__animated animate__fadeInLeft animate__delay-3s card group">
+          <div class="flex flex-col h-full">
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-heading mb-3">{{ project[locale].title }}</h3>
+              <p class="text-secondary mb-4 leading-relaxed">{{ project[locale].description }}</p>
+              <div v-if="project.image" class="mb-4 overflow-hidden rounded-lg">
+                <img 
+                  :src="project.image" 
+                  :alt="project[locale].title"
+                  class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+            <div class="mt-auto">
+              <a :href="project.link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full">
+                {{ $t('technologies-component-link') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>

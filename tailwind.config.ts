@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -10,10 +11,46 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        // Catppuccin Mocha Color Palette
+        ctp: {
+          base: '#1e1e2e',
+          mantle: '#181825',
+          crust: '#11111b',
+          surface0: '#313244',
+          surface1: '#45475a',
+          surface2: '#585b70',
+          overlay0: '#6c7086',
+          overlay1: '#7f849c',
+          overlay2: '#9399b2',
+          subtext0: '#a6adc8',
+          subtext1: '#bac2de',
+          text: '#cdd6f4',
+          lavender: '#b4befe',
+          blue: '#89b4fa',
+          sapphire: '#74c7ec',
+          sky: '#89dceb',
+          teal: '#94e2d5',
+          green: '#a6e3a1',
+          yellow: '#f9e2af',
+          peach: '#fab387',
+          maroon: '#eba0ac',
+          red: '#f38ba8',
+          mauve: '#cba6f7',
+          pink: '#f5c2e7',
+          flamingo: '#f2cdcd',
+          rosewater: '#f5e0dc',
+        },
+      },
       boxShadow: {
         zoop: "rgba(102, 109, 128, 0.08) 0px 1.2672px 1.2672px 0px, rgba(102, 109, 128, 0.08) 0px 5.06879px 10.1376px 0px",
-        zoopdark:
-          "rgba(10, 10, 10, 0.2) 0px 1.2672px 1.2672px 0px, rgba(10, 10, 10, 0.2) 0px 5.06879px 10.1376px 0px",
+        zoopdark: "rgba(10, 10, 10, 0.2) 0px 1.2672px 1.2672px 0px, rgba(10, 10, 10, 0.2) 0px 5.06879px 10.1376px 0px",
+        catppuccin: "0 4px 6px -1px rgba(17, 17, 27, 0.1), 0 2px 4px -1px rgba(17, 17, 27, 0.06)",
+        catppuccin-lg: "0 10px 15px -3px rgba(17, 17, 27, 0.1), 0 4px 6px -2px rgba(17, 17, 27, 0.05)",
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
       },
     },
     fontFamily: {
@@ -35,6 +72,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ],
       mono: [
+        "JetBrains Mono",
         "Cascadia Code",
         "ui-monospace",
         "SFMono-Regular",
@@ -48,4 +86,5 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/typography")],
+} satisfies Config;
 } satisfies Config;

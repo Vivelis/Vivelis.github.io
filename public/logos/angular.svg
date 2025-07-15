@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="angular-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dd0031"/>
+      <stop offset="100%" style="stop-color:#c3002f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#angular-gradient)" rx="50"/>
+  <path fill="#fff" d="M200 70l-120 42.6 18.3 146.4L200 330l101.7-71L320 112.6 200 70zm0 36.2l87.5 196.6h-30.9L240 258.4h-80l-16.6 44.4h-30.9L200 106.2zm0 54.8l-28.9 77.2h57.8L200 161z"/>
+</svg>
