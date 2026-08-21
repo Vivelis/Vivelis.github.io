@@ -1,5 +1,6 @@
 {
     "id": "github",
+    "icon": "simple-icons:github",
     "image": "",
     "link": "https://github.com/",
     "en": {

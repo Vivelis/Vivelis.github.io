@@ -1,6 +1,7 @@
 {
     "id": "nestjs",
-    "image": "/logos/nestjs.svg",
+    "icon": "simple-icons:nestjs",
+    "image": "",
     "link": "https://nestjs.com/",
     "en": {
         "title": "NestJS",

@@ -3,8 +3,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 const siteUrl = import.meta.env.NUXT_PUBLIC_SITE_URL;
 
-if (!siteUrl && !import.meta.dev) {
-  throw new Error("NUXT_PUBLIC_SITE_URL must be defined outside development.");
+const isDevelopment = process.env.NODE_ENV === "development"
+const isPostInstall = process.env.npm_lifecycle_event === "postinstall";
+
+if (!siteUrl && !isDevelopment && !isPostInstall) {
+  throw new Error("NUXT_PUBLIC_SITE_URL must be set outside development mode.");
 }
 
 export default defineNuxtConfig({

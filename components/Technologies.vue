@@ -1,8 +1,10 @@
 <script setup>
+import { Icon } from '@iconify/vue';
+
 const { locale } = useI18n();
 
 const { data: technologies } = await useAsyncData('technologies', () =>
-  queryCollection('technologies').select("id", "image", "link", locale.value).all()
+  queryCollection('technologies').select("id", "icon", "image", "link", locale.value).all()
 );
 </script>
 
@@ -17,8 +19,14 @@ const { data: technologies } = await useAsyncData('technologies', () =>
           class="animate__animated animate__fadeInLeft animate__delay-3s card group text-center">
           <div class="flex flex-col h-full">
             <div class="flex-1">
-              <div v-if="technology.image" class="mb-4 flex justify-center">
+              <div v-if="technology.icon || technology.image" class="mb-4 flex justify-center">
+                <Icon
+                  v-if="technology.icon"
+                  :icon="technology.icon"
+                  class="w-16 h-16 transition-transform duration-300 group-hover:scale-110"
+                />
                 <img
+                  v-else
                   :src="technology.image"
                   :alt="technology[locale].title"
                   class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"

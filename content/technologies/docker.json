@@ -1,5 +1,6 @@
 {
     "id": "docker",
+    "icon": "simple-icons:docker",
     "image": "",
     "link": "https://www.docker.com/",
     "en": {

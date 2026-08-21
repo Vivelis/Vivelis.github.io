@@ -1,6 +1,7 @@
 {
     "id": "kubernetes",
-    "image": "/logos/kubernetes.svg",
+    "icon": "simple-icons:kubernetes",
+    "image": "",
     "link": "https://kubernetes.io/",
     "en": {
         "title": "Kubernetes",

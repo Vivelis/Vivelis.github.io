@@ -23,6 +23,7 @@ export default defineContentConfig({
       source: "technologies/*.json",
       schema: z.object({
         id: z.string(),
+        icon: z.string().optional(),
         image: z.string().optional(),
         link: z.string().url(),
         en: z.object({

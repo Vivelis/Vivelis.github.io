@@ -1,5 +1,6 @@
 {
     "id": "jest",
+    "icon": "simple-icons:jest",
     "image": "",
     "link": "https://jestjs.io/",
     "en": {
