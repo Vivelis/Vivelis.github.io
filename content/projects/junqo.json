@@ -2,6 +2,7 @@
     "id": "junqo",
     "image": "/projects/junqo.svg",
     "link": "https://github.com/Junqo-org/junqo-platform",
+    "demo": "https://junqo.vivelis.eu",
     "en": {
         "title": "Junqo",
         "description": "Junqo is a multi-platform solution designed to help young people find internships and work-study programs."

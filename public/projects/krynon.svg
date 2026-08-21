@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="krynon-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <linearGradient id="krynon-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7d06a"/>
+      <stop offset="100%" style="stop-color:#e8a020"/>
+    </linearGradient>
+    <linearGradient id="krynon-silver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c0c0"/>
+      <stop offset="100%" style="stop-color:#8a8a8a"/>
+    </linearGradient>
+    <linearGradient id="krynon-bronze" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#cd7f32"/>
+      <stop offset="100%" style="stop-color:#8b4c10"/>
+    </linearGradient>
+    <linearGradient id="krynon-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#krynon-bg)" rx="12"/>
+
+  <!-- Header -->
+  <rect width="400" height="50" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="38" width="400" height="12" fill="#1a1a2e"/>
+
+  <!-- Logo icon: Greek Κ -->
+  <text x="22" y="35" fill="url(#krynon-accent)" font-family="Georgia, serif" font-size="26" font-weight="bold">K</text>
+  <text x="48" y="35" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="18" font-weight="bold">rynon</text>
+
+  <!-- Tagline -->
+  <text x="200" y="32" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Rank what matters to you</text>
+
+  <!-- Podium base area -->
+  <!-- 2nd place (silver) -->
+  <rect x="60" y="160" width="90" height="80" fill="url(#krynon-silver)" rx="6 6 0 0" opacity="0.9"/>
+  <text x="105" y="155" fill="#c0c0c0" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">2</text>
+
+  <!-- 1st place (gold) - tallest -->
+  <rect x="155" y="120" width="90" height="120" fill="url(#krynon-gold)" rx="6 6 0 0" opacity="0.95"/>
+  <text x="200" y="113" fill="#f7d06a" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">1</text>
+  <!-- Star on top -->
+  <text x="200" y="96" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#f7d06a">★</text>
+
+  <!-- 3rd place (bronze) -->
+  <rect x="250" y="185" width="90" height="55" fill="url(#krynon-bronze)" rx="6 6 0 0" opacity="0.9"/>
+  <text x="295" y="178" fill="#cd7f32" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">3</text>
+
+  <!-- Podium floor -->
+  <rect x="40" y="238" width="320" height="12" fill="#2d2d5a" rx="4"/>
+
+  <!-- Feature score bars (bottom row) -->
+  <text x="30" y="270" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">Price</text>
+  <rect x="60" y="262" width="70" height="6" fill="#334155" rx="3"/>
+  <rect x="60" y="262" width="58" height="6" fill="url(#krynon-accent)" rx="3"/>
+
+  <text x="145" y="270" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">Quality</text>
+  <rect x="185" y="262" width="70" height="6" fill="#334155" rx="3"/>
+  <rect x="185" y="262" width="65" height="6" fill="url(#krynon-accent)" rx="3"/>
+
+  <text x="268" y="270" fill="#94a3b8" font-family="Arial, sans-serif" font-size="9">Score</text>
+  <rect x="303" y="262" width="65" height="6" fill="#334155" rx="3"/>
+  <rect x="303" y="262" width="47" height="6" fill="url(#krynon-accent)" rx="3"/>
+
+  <!-- Podium text labels -->
+  <text x="105" y="220" fill="#1a1a2e" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Item B</text>
+  <text x="200" y="195" fill="#1a1a2e" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Item A</text>
+  <text x="295" y="228" fill="#1a1a2e" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Item C</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+    "id": "krynon",
+    "image": "/projects/krynon.svg",
+    "link": "https://github.com/Holobion/Krynon",
+    "demo": "https://krynon.vivelis.eu",
+    "en": {
+        "title": "Krynon",
+        "description": "Krynon ranks objects by the features you value most — price, taste, repairability, and more. Born from the Greek krinein (to sort, decide), it's your ultimate analytical tool to find exactly what you need."
+    },
+    "fr": {
+        "title": "Krynon",
+        "description": "Krynon classe des objets selon les critères qui comptent pour vous — prix, goût, réparabilité, et plus encore. Né du grec krinein (trier, décider), c'est votre outil d'analyse ultime pour trouver exactement ce dont vous avez besoin."
+    }
+}

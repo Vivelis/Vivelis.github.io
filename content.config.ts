@@ -8,6 +8,7 @@ export default defineContentConfig({
         id: z.string(),
         image: z.string().optional(),
         link: z.string().url(),
+        demo: z.string().url().optional(),
         en: z.object({
           title: z.string(),
           description: z.string(),
