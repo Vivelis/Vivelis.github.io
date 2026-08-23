@@ -2,12 +2,17 @@
 import tailwindcss from "@tailwindcss/vite";
 
 const siteUrl = import.meta.env.NUXT_PUBLIC_SITE_URL;
+const uptimeKumaUrl = import.meta.env.NUXT_PUBLIC_UPTIME_KUMA_URL;
 
 const isDevelopment = process.env.NODE_ENV === "development"
 const isPostInstall = process.env.npm_lifecycle_event === "postinstall";
 
 if (!siteUrl && !isDevelopment && !isPostInstall) {
   throw new Error("NUXT_PUBLIC_SITE_URL must be set outside development mode.");
+}
+
+if (!uptimeKumaUrl && !isPostInstall) {
+  throw new Error("NUXT_PUBLIC_UPTIME_KUMA_URL must be set.");
 }
 
 export default defineNuxtConfig({
@@ -104,6 +109,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl,
+      uptimeKumaUrl,
     },
   },
   i18n: {

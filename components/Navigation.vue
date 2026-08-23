@@ -12,6 +12,9 @@
           <a href="#projects" class="text-secondary hover:text-accent transition-colors duration-200">
             {{ $t('projects-component-title') || 'Projects' }}
           </a>
+          <a href="#homelab" class="text-secondary hover:text-accent transition-colors duration-200">
+            {{ $t('homelab-component-title') || 'Homelab' }}
+          </a>
           <a href="#technologies" class="text-secondary hover:text-accent transition-colors duration-200">
             {{ $t('technologies-component-title') || 'Technologies' }}
           </a>

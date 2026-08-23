@@ -6,5 +6,9 @@
     "projects-component-demo": "Live Demo",
     "technologies-component-title": "The technologies I love",
     "technologies-component-link": "Learn more",
+    "homelab-component-title": "My Homelab",
+    "homelab-component-description": "I run a self-hosted infrastructure on bare-metal servers at home. It hosts personal projects, development environments, and production services — all managed with Kubernetes (K3s), monitored 24/7.",
+    "homelab-component-status-title": "Live service status",
+    "homelab-component-status-link": "Open in Uptime Kuma",
     "footer-component-title": "All rights reserved."
 }

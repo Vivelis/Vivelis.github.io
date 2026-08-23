@@ -6,5 +6,9 @@
     "projects-component-demo": "Démo en ligne",
     "technologies-component-title": "Les technologies que j'adore",
     "technologies-component-link": "En savoir plus",
+    "homelab-component-title": "Mon Homelab",
+    "homelab-component-description": "Je gère une infrastructure auto-hébergée sur des serveurs bare-metal à la maison. Elle héberge des projets personnels, des environnements de développement et des services en production — le tout géré avec Kubernetes (K3s) et surveillé 24h/24.",
+    "homelab-component-status-title": "État des services en direct",
+    "homelab-component-status-link": "Ouvrir dans Uptime Kuma",
     "footer-component-title": "Tous droits réservés."
 }

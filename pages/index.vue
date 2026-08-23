@@ -6,6 +6,9 @@
       <div id="projects">
         <Projects />
       </div>
+      <div id="homelab">
+        <Homelab />
+      </div>
       <div id="technologies">
         <Technologies />
       </div>
