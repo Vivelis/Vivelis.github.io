@@ -1,7 +1,11 @@
 {
     "id": "krynon",
     "order": 1,
-    "image": "/projects/krynon.svg",
+    "image": "/projects/krynon/home-page.png",
+    "images": [
+        "/projects/krynon/home-page.png",
+        "/projects/krynon/workspace.png"
+    ],
     "link": "https://github.com/Holobion/Krynon",
     "demo": "https://krynon.vivelis.eu",
     "en": {

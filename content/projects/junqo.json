@@ -1,7 +1,12 @@
 {
     "id": "junqo",
     "order": 2,
-    "image": "/projects/junqo.svg",
+    "image": "/projects/junqo/home-page.png",
+    "images": [
+        "/projects/junqo/home-page.png",
+        "/projects/junqo/recruitment-stats.png",
+        "/projects/junqo/swipe-job.png"
+    ],
     "link": "https://github.com/Junqo-org/junqo-platform",
     "demo": "https://junqo.vivelis.eu",
     "en": {

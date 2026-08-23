@@ -8,6 +8,7 @@ export default defineContentConfig({
         id: z.string(),
         order: z.number().optional(),
         image: z.string().optional(),
+        images: z.array(z.string()).optional(),
         link: z.string().url(),
         demo: z.string().url().optional(),
         video: z.string().url().optional(),

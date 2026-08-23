@@ -25,6 +25,94 @@ const iframeErrors = ref({});
 function onIframeError(id) {
   iframeErrors.value = { ...iframeErrors.value, [id]: true };
 }
+
+// Carousel state
+const activeImageIndices = ref({});
+
+function getProjectImages(project) {
+  if (project.images && project.images.length > 0) {
+    return project.images;
+  }
+  if (project.image) {
+    return [project.image];
+  }
+  return [];
+}
+
+function getActiveIndex(projectId) {
+  return activeImageIndices.value[projectId] || 0;
+}
+
+function setActiveIndex(projectId, idx) {
+  activeImageIndices.value = { ...activeImageIndices.value, [projectId]: idx };
+}
+
+function prevImage(projectId, total) {
+  const current = getActiveIndex(projectId);
+  setActiveIndex(projectId, (current - 1 + total) % total);
+}
+
+function nextImage(projectId, total) {
+  const current = getActiveIndex(projectId);
+  setActiveIndex(projectId, (current + 1) % total);
+}
+
+// Lightbox state
+const activeLightbox = ref(null);
+
+function openLightbox(project, index = 0) {
+  activeLightbox.value = { project, index };
+}
+
+function closeLightbox() {
+  activeLightbox.value = null;
+}
+
+function prevLightboxImage() {
+  if (!activeLightbox.value) return;
+  const imgs = getProjectImages(activeLightbox.value.project);
+  activeLightbox.value.index = (activeLightbox.value.index - 1 + imgs.length) % imgs.length;
+}
+
+function nextLightboxImage() {
+  if (!activeLightbox.value) return;
+  const imgs = getProjectImages(activeLightbox.value.project);
+  activeLightbox.value.index = (activeLightbox.value.index + 1) % imgs.length;
+}
+
+// Auto-slide state & handlers
+const isHoveredMap = ref({});
+let autoSlideTimer = null;
+
+function startAutoSlide() {
+  if (autoSlideTimer) clearInterval(autoSlideTimer);
+  autoSlideTimer = setInterval(() => {
+    if (activeLightbox.value || !projects.value) return;
+    const allProjects = [...featuredProjects.value, ...otherProjects.value];
+    allProjects.forEach(project => {
+      const imgs = getProjectImages(project);
+      if (imgs.length > 1 && !isHoveredMap.value[project.id]) {
+        nextImage(project.id, imgs.length);
+      }
+    });
+  }, 4000);
+}
+
+function handleMouseEnter(projectId) {
+  isHoveredMap.value = { ...isHoveredMap.value, [projectId]: true };
+}
+
+function handleMouseLeave(projectId) {
+  isHoveredMap.value = { ...isHoveredMap.value, [projectId]: false };
+}
+
+onMounted(() => {
+  startAutoSlide();
+});
+
+onUnmounted(() => {
+  if (autoSlideTimer) clearInterval(autoSlideTimer);
+});
 </script>
 
 <template>
@@ -59,9 +147,64 @@ function onIframeError(id) {
                 </div>
                 <p class="text-secondary text-base md:text-lg mb-6 leading-relaxed">{{ project[locale].description }}</p>
 
-                <!-- Preview: iframe when demo exists, fallback to image on error -->
-                <div v-if="project.image || project.demo" class="project-preview featured-preview mt-auto mb-6 overflow-hidden rounded-xl">
-                  <template v-if="project.demo && !iframeErrors[project.id]">
+                <!-- Preview: Image Carousel / Single Image / iframe fallback -->
+                <div
+                  v-if="getProjectImages(project).length > 0 || (project.demo && !iframeErrors[project.id])"
+                  class="project-preview featured-preview mt-auto mb-6 overflow-hidden rounded-xl group/preview relative"
+                  @mouseenter="handleMouseEnter(project.id)"
+                  @mouseleave="handleMouseLeave(project.id)"
+                >
+                  <template v-if="getProjectImages(project).length > 0">
+                    <div class="relative w-full h-full cursor-pointer select-none" @click="openLightbox(project, getActiveIndex(project.id))">
+                      <Transition name="img-fade">
+                        <img
+                          :key="getActiveIndex(project.id)"
+                          :src="getProjectImages(project)[getActiveIndex(project.id)]"
+                          :alt="project[locale].title + ' screenshot ' + (getActiveIndex(project.id) + 1)"
+                          class="w-full h-full object-cover object-top transition-all duration-500 group-hover/preview:scale-105"
+                        />
+                      </Transition>
+                      <!-- Zoom badge indicator -->
+                      <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white px-2.5 py-1 rounded-md text-xs opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 flex items-center gap-1.5 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                        </svg>
+                        <span>Agrandir</span>
+                      </div>
+                    </div>
+
+                    <!-- Carousel controls if multiple images -->
+                    <template v-if="getProjectImages(project).length > 1">
+                      <button
+                        @click.stop="prevImage(project.id, getProjectImages(project).length)"
+                        class="carousel-nav-btn left-2"
+                        aria-label="Previous image"
+                      >
+                        ‹
+                      </button>
+                      <button
+                        @click.stop="nextImage(project.id, getProjectImages(project).length)"
+                        class="carousel-nav-btn right-2"
+                        aria-label="Next image"
+                      >
+                        ›
+                      </button>
+
+                      <!-- Carousel dots -->
+                      <div class="absolute bottom-2.5 left-0 right-0 flex justify-center gap-1.5 z-10 pointer-events-auto">
+                        <button
+                          v-for="(_, imgIdx) in getProjectImages(project)"
+                          :key="imgIdx"
+                          @click.stop="setActiveIndex(project.id, imgIdx)"
+                          :class="['carousel-dot', getActiveIndex(project.id) === imgIdx ? 'carousel-dot-active' : '']"
+                          :aria-label="'Go to image ' + (imgIdx + 1)"
+                        />
+                      </div>
+                    </template>
+                  </template>
+
+                  <!-- Fallback iframe when no images exist but demo is present -->
+                  <template v-else-if="project.demo && !iframeErrors[project.id]">
                     <iframe
                       :src="project.demo"
                       :title="project[locale].title + ' live demo'"
@@ -73,13 +216,6 @@ function onIframeError(id) {
                     />
                     <div class="iframe-overlay" />
                   </template>
-
-                  <img
-                    v-if="project.image && (!project.demo || iframeErrors[project.id])"
-                    :src="project.image"
-                    :alt="project[locale].title"
-                    class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
-                  />
                 </div>
               </div>
               <div class="mt-auto flex gap-3 pt-2">
@@ -116,9 +252,62 @@ function onIframeError(id) {
                 <h4 class="text-xl font-semibold text-heading mb-3">{{ project[locale].title }}</h4>
                 <p class="text-secondary mb-4 leading-relaxed">{{ project[locale].description }}</p>
 
-                <!-- Preview: iframe when demo exists, fallback to image on error -->
-                <div v-if="project.image || project.demo" class="project-preview mt-auto mb-4 overflow-hidden rounded-lg">
-                  <template v-if="project.demo && !iframeErrors[project.id]">
+                <!-- Preview: Image Carousel / Single Image / iframe fallback -->
+                <div
+                  v-if="getProjectImages(project).length > 0 || (project.demo && !iframeErrors[project.id])"
+                  class="project-preview mt-auto mb-4 overflow-hidden rounded-lg group/preview relative"
+                  @mouseenter="handleMouseEnter(project.id)"
+                  @mouseleave="handleMouseLeave(project.id)"
+                >
+                  <template v-if="getProjectImages(project).length > 0">
+                    <div class="relative w-full h-full cursor-pointer select-none" @click="openLightbox(project, getActiveIndex(project.id))">
+                      <Transition name="img-fade">
+                        <img
+                          :key="getActiveIndex(project.id)"
+                          :src="getProjectImages(project)[getActiveIndex(project.id)]"
+                          :alt="project[locale].title + ' screenshot ' + (getActiveIndex(project.id) + 1)"
+                          class="w-full h-48 object-cover object-top transition-all duration-300 group-hover/preview:scale-105"
+                        />
+                      </Transition>
+                      <div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-white px-2 py-0.5 rounded text-xs opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                        </svg>
+                        <span>Agrandir</span>
+                      </div>
+                    </div>
+
+                    <!-- Carousel controls if multiple images -->
+                    <template v-if="getProjectImages(project).length > 1">
+                      <button
+                        @click.stop="prevImage(project.id, getProjectImages(project).length)"
+                        class="carousel-nav-btn left-2"
+                        aria-label="Previous image"
+                      >
+                        ‹
+                      </button>
+                      <button
+                        @click.stop="nextImage(project.id, getProjectImages(project).length)"
+                        class="carousel-nav-btn right-2"
+                        aria-label="Next image"
+                      >
+                        ›
+                      </button>
+
+                      <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5 z-10 pointer-events-auto">
+                        <button
+                          v-for="(_, imgIdx) in getProjectImages(project)"
+                          :key="imgIdx"
+                          @click.stop="setActiveIndex(project.id, imgIdx)"
+                          :class="['carousel-dot', getActiveIndex(project.id) === imgIdx ? 'carousel-dot-active' : '']"
+                          :aria-label="'Go to image ' + (imgIdx + 1)"
+                        />
+                      </div>
+                    </template>
+                  </template>
+
+                  <!-- Fallback iframe when no images exist but demo is present -->
+                  <template v-else-if="project.demo && !iframeErrors[project.id]">
                     <iframe
                       :src="project.demo"
                       :title="project[locale].title + ' live demo'"
@@ -130,13 +319,6 @@ function onIframeError(id) {
                     />
                     <div class="iframe-overlay" />
                   </template>
-
-                  <img
-                    v-if="project.image && (!project.demo || iframeErrors[project.id])"
-                    :src="project.image"
-                    :alt="project[locale].title"
-                    class="w-full h-48 object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
-                  />
                 </div>
               </div>
               <div class="mt-auto flex gap-2">
@@ -161,6 +343,53 @@ function onIframeError(id) {
       </div>
 
     </div>
+
+    <!-- Lightbox Modal for full-screen screenshot viewing -->
+    <Teleport to="body">
+      <Transition name="fade">
+        <div v-if="activeLightbox" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 md:p-8" @click.self="closeLightbox">
+          <button
+            @click="closeLightbox"
+            class="absolute top-4 right-4 text-white/80 hover:text-white bg-black/50 hover:bg-black/80 p-2.5 rounded-full transition-all duration-200 z-50 border border-white/10"
+            aria-label="Close modal"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div class="relative max-w-5xl max-h-[85vh] w-full flex flex-col items-center justify-center">
+            <img
+              :src="getProjectImages(activeLightbox.project)[activeLightbox.index]"
+              :alt="activeLightbox.project[locale].title"
+              class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-white/10"
+            />
+
+            <!-- Lightbox nav controls -->
+            <template v-if="getProjectImages(activeLightbox.project).length > 1">
+              <button
+                @click="prevLightboxImage"
+                class="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-3 rounded-full transition-all border border-white/10 flex items-center justify-center text-xl"
+                aria-label="Previous screenshot"
+              >
+                ‹
+              </button>
+              <button
+                @click="nextLightboxImage"
+                class="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white p-3 rounded-full transition-all border border-white/10 flex items-center justify-center text-xl"
+                aria-label="Next screenshot"
+              >
+                ›
+              </button>
+              
+              <div class="mt-4 text-xs font-semibold tracking-wider text-white/80 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
+                {{ activeLightbox.index + 1 }} / {{ getProjectImages(activeLightbox.project).length }}
+              </div>
+            </template>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
   </section>
 </template>
 
@@ -256,4 +485,80 @@ function onIframeError(id) {
   inset: 0;
   cursor: default;
 }
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  opacity: 0;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.group\/preview:hover .carousel-nav-btn {
+  opacity: 0.9;
+}
+
+.carousel-nav-btn:hover {
+  opacity: 1 !important;
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-dot-active {
+  width: 1.25rem;
+  background: var(--ctp-teal);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.img-fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+
+.img-fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.img-fade-enter-from,
+.img-fade-leave-to {
+  opacity: 0.2;
+}
 </style>
+

@@ -1,7 +1,12 @@
 {
     "id": "prop-hunt",
     "order": 3,
-    "image": "/projects/prop-hunt.svg",
+    "image": "/projects/prop-hunt/fight.png",
+    "images": [
+        "/projects/prop-hunt/fight.png",
+        "/projects/prop-hunt/hobby.png",
+        "/projects/prop-hunt/specialists.png"
+    ],
     "link": "https://github.com/EnzoGrn/PropHunt",
     "video": "https://www.youtube.com/watch?v=IeKeR6lU2Zg",
     "en": {
