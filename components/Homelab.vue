@@ -38,6 +38,7 @@ const statusUrl = config.public.uptimeKumaUrl;
             :src="statusUrl"
             title="Homelab Status — Uptime Kuma"
             class="homelab-iframe"
+            style="color-scheme: dark;"
             loading="lazy"
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             scrolling="auto"
@@ -95,6 +96,7 @@ const statusUrl = config.public.uptimeKumaUrl;
   height: 600px;
   overflow: hidden;
   background: var(--primary-bg);
+  color-scheme: dark;
 }
 
 .homelab-iframe {
@@ -102,6 +104,7 @@ const statusUrl = config.public.uptimeKumaUrl;
   height: 100%;
   border: none;
   display: block;
+  color-scheme: dark;
   /* Scale a ~1280-wide desktop viewport into the container */
   transform-origin: top left;
 }
