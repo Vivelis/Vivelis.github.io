@@ -11,9 +11,11 @@ const { data: technologies } = await useAsyncData('technologies', () =>
 <template>
   <section class="technologies px-6 py-16">
     <div class="max-w-6xl mx-auto">
-      <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl md:text-4xl font-bold text-heading mb-12 text-center">
-        {{ $t('technologies-component-title') }}
-      </h2>
+      <div class="text-center mb-12">
+        <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-4xl md:text-5xl font-extrabold text-heading inline-block underline decoration-[var(--ctp-teal)] decoration-4 underline-offset-8">
+          {{ $t('technologies-component-title') }}
+        </h2>
+      </div>
       <div class="grid-auto-fill">
         <div v-for="technology in technologies" :key="technology.id"
           class="animate__animated animate__fadeInLeft animate__delay-3s card group text-center">

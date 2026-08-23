@@ -1,0 +1,15 @@
+{
+    "id": "prop-hunt",
+    "order": 3,
+    "image": "/projects/prop-hunt.svg",
+    "link": "https://github.com/EnzoGrn/PropHunt",
+    "video": "https://www.youtube.com/watch?v=IeKeR6lU2Zg",
+    "en": {
+        "title": "PropHunt (Where is Brian)",
+        "description": "A 3D multiplayer hide-and-seek game developed in Unity for up to 8 players. Play as a seeker with unique class abilities or transform into environment props as a hider."
+    },
+    "fr": {
+        "title": "PropHunt (Where is Brian)",
+        "description": "Un jeu de cache-cache multijoueur 3D développé sous Unity jusqu'à 8 joueurs. Incarnez un chercheur aux compétences uniques ou métamorphosez-vous en éléments du décor."
+    }
+}

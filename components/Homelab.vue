@@ -9,9 +9,11 @@ const statusUrl = config.public.uptimeKumaUrl;
   <section class="homelab px-6 py-16">
     <div class="max-w-6xl mx-auto">
       <!-- Section header -->
-      <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-3xl md:text-4xl font-bold text-heading mb-4 text-center">
-        {{ $t('homelab-component-title') }}
-      </h2>
+      <div class="text-center mb-4">
+        <h2 class="animate__animated animate__fadeInLeft animate__delay-2s text-4xl md:text-5xl font-extrabold text-heading inline-block underline decoration-[var(--ctp-teal)] decoration-4 underline-offset-8">
+          {{ $t('homelab-component-title') }}
+        </h2>
+      </div>
       <p class="animate__animated animate__fadeInLeft animate__delay-2s text-secondary text-center max-w-2xl mx-auto mb-12 leading-relaxed">
         {{ $t('homelab-component-description') }}
       </p>

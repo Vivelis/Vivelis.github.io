@@ -6,9 +6,11 @@ export default defineContentConfig({
       source: "projects/*.json",
       schema: z.object({
         id: z.string(),
+        order: z.number().optional(),
         image: z.string().optional(),
         link: z.string().url(),
         demo: z.string().url().optional(),
+        video: z.string().url().optional(),
         en: z.object({
           title: z.string(),
           description: z.string(),

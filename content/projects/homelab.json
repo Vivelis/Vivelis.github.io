@@ -1,0 +1,14 @@
+{
+    "id": "homelab",
+    "order": 4,
+    "image": "/projects/homelab.svg",
+    "link": "#homelab",
+    "en": {
+        "title": "Homelab & Infrastructure",
+        "description": "Self-hosted bare-metal infrastructure running Kubernetes (K3s), hosting personal projects, automated deployments, and 24/7 Uptime Kuma monitoring."
+    },
+    "fr": {
+        "title": "Homelab & Infrastructure",
+        "description": "Infrastructure auto-hébergée sur serveurs bare-metal sous Kubernetes (K3s), hébergeant des projets personnels, déploiements automatisés et surveillance Uptime Kuma 24/7."
+    }
+}

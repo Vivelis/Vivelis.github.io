@@ -1,5 +1,6 @@
 {
     "id": "junqo",
+    "order": 2,
     "image": "/projects/junqo.svg",
     "link": "https://github.com/Junqo-org/junqo-platform",
     "demo": "https://junqo.vivelis.eu",

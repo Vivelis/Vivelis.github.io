@@ -1,0 +1,13 @@
+{
+    "id": "gravity-fight",
+    "image": "/projects/gravity-fight.svg",
+    "link": "https://github.com/AntoninLaudon/GravityFight",
+    "en": {
+        "title": "GravityFight",
+        "description": "A dynamic 2D fighting game centered around gravity manipulation and arena physics."
+    },
+    "fr": {
+        "title": "GravityFight",
+        "description": "Un jeu de combat 2D dynamique axé sur la manipulation de la gravité et la physique d'arène."
+    }
+}

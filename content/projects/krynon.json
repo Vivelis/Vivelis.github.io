@@ -1,5 +1,6 @@
 {
     "id": "krynon",
+    "order": 1,
     "image": "/projects/krynon.svg",
     "link": "https://github.com/Holobion/Krynon",
     "demo": "https://krynon.vivelis.eu",

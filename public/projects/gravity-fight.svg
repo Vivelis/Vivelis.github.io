@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="gf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b0c10"/>
+      <stop offset="50%" style="stop-color:#1f2833"/>
+      <stop offset="100%" style="stop-color:#0b0c10"/>
+    </linearGradient>
+    <linearGradient id="gf-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#45a29e"/>
+      <stop offset="100%" style="stop-color:#66fcf1"/>
+    </linearGradient>
+    <linearGradient id="gf-magenta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff2e63"/>
+      <stop offset="100%" style="stop-color:#ff0055"/>
+    </linearGradient>
+    <radialGradient id="gf-grav-well" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#66fcf1;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#8a2be2;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#gf-bg)" rx="12"/>
+
+  <!-- Title Banner -->
+  <rect x="20" y="16" width="360" height="38" fill="#1f2833" rx="8" opacity="0.9"/>
+  <text x="200" y="41" fill="#66fcf1" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">GravityFight</text>
+
+  <!-- Game Arena Border -->
+  <rect x="20" y="64" width="360" height="216" fill="#0b0c10" rx="8" stroke="#45a29e" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Gravity Vortex Background -->
+  <circle cx="200" cy="170" r="85" fill="url(#gf-grav-well)"/>
+  
+  <!-- Gravity Field Rings -->
+  <circle cx="200" cy="170" r="70" stroke="#66fcf1" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="8,6"/>
+  <circle cx="200" cy="170" r="45" stroke="#ff2e63" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="4,4"/>
+  <circle cx="200" cy="170" r="20" stroke="#66fcf1" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Gravity Vectors / Direction Arrows -->
+  <path d="M 130 110 Q 170 140 200 110" stroke="url(#gf-cyan)" stroke-width="2" fill="none" opacity="0.8"/>
+  <polygon points="200,110 193,103 195,114" fill="#66fcf1"/>
+
+  <path d="M 270 230 Q 230 200 200 230" stroke="url(#gf-magenta)" stroke-width="2" fill="none" opacity="0.8"/>
+  <polygon points="200,230 207,237 205,226" fill="#ff2e63"/>
+
+  <!-- Fighter 1 (Cyan / Gravity Manipulator) -->
+  <g transform="translate(110, 140)">
+    <circle cx="15" cy="15" r="10" fill="url(#gf-cyan)"/>
+    <path d="M 15 25 L 15 45 M 15 32 L 3 22 M 15 32 L 27 22 M 15 45 L 5 60 M 15 45 L 23 60" stroke="#66fcf1" stroke-width="3" stroke-linecap="round"/>
+    <!-- Energy Aura -->
+    <circle cx="15" cy="15" r="16" stroke="#66fcf1" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Fighter 2 (Magenta / Anti-Gravity Attacker) -->
+  <g transform="translate(260, 160) scale(-1, 1)">
+    <circle cx="15" cy="15" r="10" fill="url(#gf-magenta)"/>
+    <path d="M 15 25 L 15 45 M 15 32 L 2 18 M 15 32 L 28 20 M 15 45 L 3 58 M 15 45 L 25 58" stroke="#ff2e63" stroke-width="3" stroke-linecap="round"/>
+    <!-- Energy Aura -->
+    <circle cx="15" cy="15" r="16" stroke="#ff2e63" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- Impact / Clash Effect in Center -->
+  <path d="M 190 160 L 210 180 M 210 160 L 190 180" stroke="#ffffff" stroke-width="2.5" opacity="0.9"/>
+  <circle cx="200" cy="170" r="6" fill="#ffffff" opacity="0.8"/>
+
+  <!-- UI Floating Badges -->
+  <rect x="30" y="74" width="75" height="18" fill="#1f2833" rx="4" opacity="0.8"/>
+  <text x="67" y="87" fill="#66fcf1" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">P1: GRAVITY</text>
+
+  <rect x="295" y="74" width="75" height="18" fill="#1f2833" rx="4" opacity="0.8"/>
+  <text x="332" y="87" fill="#ff2e63" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">P2: VECTOR</text>
+</svg>
