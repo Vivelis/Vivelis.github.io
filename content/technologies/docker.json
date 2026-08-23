@@ -5,10 +5,10 @@
     "link": "https://www.docker.com/",
     "en": {
         "title": "Docker",
-        "description": ""
+        "description": "A platform for developing, shipping, and running applications in lightweight, isolated containers."
     },
     "fr": {
         "title": "Docker",
-        "description": ""
+        "description": "Une plateforme pour développer, déployer et exécuter des applications dans des conteneurs légers et isolés."
     }
 }

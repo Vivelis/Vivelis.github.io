@@ -5,10 +5,10 @@
     "link": "https://godotengine.org/",
     "en": {
         "title": "Godot Engine",
-        "description": ""
+        "description": "A free and open-source cross-platform game engine for creating 2D and 3D games."
     },
     "fr": {
         "title": "Godot",
-        "description": ""
+        "description": "Un moteur de jeu multiplateforme gratuit et open-source pour la création de jeux 2D et 3D."
     }
 }

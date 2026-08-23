@@ -5,10 +5,10 @@
     "link": "https://www.typescriptlang.org/",
     "en": {
         "title": "TypeScript",
-        "description": ""
+        "description": "A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale."
     },
     "fr": {
         "title": "TypeScript",
-        "description": ""
+        "description": "Un sur-ensemble typé de JavaScript qui améliore l'outillage et la robustesse du code pour les projets de toutes tailles."
     }
 }

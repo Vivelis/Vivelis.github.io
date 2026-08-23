@@ -5,10 +5,10 @@
     "link": "https://www.python.org/",
     "en": {
         "title": "Python",
-        "description": ""
+        "description": "A versatile, high-level programming language known for its readability and rich ecosystem in web development, data science, and automation."
     },
     "fr": {
         "title": "Python",
-        "description": ""
+        "description": "Un langage de programmation polyvalent et de haut niveau, prisé pour sa lisibilité et son riche écosystème en web, data science et automatisation."
     }
 }

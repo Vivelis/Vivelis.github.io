@@ -5,10 +5,10 @@
     "link": "https://flutter.dev/",
     "en": {
         "title": "Flutter",
-        "description": ""
+        "description": "Google's UI toolkit for building natively compiled, multi-platform applications from a single codebase."
     },
     "fr": {
         "title": "Flutter",
-        "description": ""
+        "description": "Le kit de développement UI de Google pour créer des applications multiplateformes compilées nativement à partir d'un code source unique."
     }
 }

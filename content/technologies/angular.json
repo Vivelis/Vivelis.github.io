@@ -5,10 +5,10 @@
     "link": "https://angular.dev/",
     "en": {
         "title": "Angular",
-        "description": ""
+        "description": "A web application framework developed by Google for building scalable, high-performance single-page web applications."
     },
     "fr": {
         "title": "Angular",
-        "description": ""
+        "description": "Un framework d'application web développé par Google pour créer des applications web monopages performantes et évolutives."
     }
 }

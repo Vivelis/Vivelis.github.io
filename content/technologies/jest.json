@@ -5,10 +5,10 @@
     "link": "https://jestjs.io/",
     "en": {
         "title": "Jest",
-        "description": ""
+        "description": "A delightful JavaScript testing framework with a focus on simplicity and support for modern web applications."
     },
     "fr": {
         "title": "Jest",
-        "description": ""
+        "description": "Un framework de test JavaScript conçu pour la simplicité et adapté aux applications web modernes."
     }
 }

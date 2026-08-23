@@ -5,10 +5,10 @@
     "link": "https://github.com/",
     "en": {
         "title": "Github",
-        "description": ""
+        "description": "A developer platform for version control, code hosting, collaboration, and automated CI/CD workflows using Git."
     },
     "fr": {
         "title": "Github",
-        "description": ""
+        "description": "Une plateforme pour le contrôle de version, l'hébergement de code, la collaboration et l'automatisation CI/CD basée sur Git."
     }
 }

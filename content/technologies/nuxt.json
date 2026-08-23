@@ -5,10 +5,10 @@
     "link": "https://nuxt.com/",
     "en": {
         "title": "Nuxt",
-        "description": ""
+        "description": "An intuitive Vue.js framework for building server-rendered, static, and full-stack web applications."
     },
     "fr": {
         "title": "Nuxt",
-        "description": ""
+        "description": "Un framework Vue.js intuitif pour créer des applications web rendues côté serveur, statiques ou full-stack."
     }
 }

@@ -5,10 +5,10 @@
     "link": "https://devdocs.io/c/",
     "en": {
         "title": "C",
-        "description": ""
+        "description": "A foundational procedural programming language widely used for system software, embedded systems, and high-performance applications."
     },
     "fr": {
         "title": "C",
-        "description": ""
+        "description": "Un langage de programmation procédural fondamental largement utilisé pour les logiciels système, l'embarqué et les applications haute performance."
     }
 }
