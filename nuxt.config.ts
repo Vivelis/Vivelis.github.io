@@ -120,7 +120,14 @@ export default defineNuxtConfig({
     defaultLocale: "fr",
     lazy: true,
     langDir: "locales/",
-    strategy: "prefix_except_default",
+    strategy: "prefix_and_default",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      alwaysRedirect: false,
+      fallbackLocale: "fr",
+    },
     bundle: {
       optimizeTranslationDirective: false,
     },

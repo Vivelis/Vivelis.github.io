@@ -4,7 +4,7 @@ import { Icon } from '@iconify/vue';
 const { locale } = useI18n();
 
 const { data: technologies } = await useAsyncData('technologies', () =>
-  queryCollection('technologies').select("id", "icon", "image", "link", locale.value).all()
+  queryCollection('technologies').all()
 );
 </script>
 

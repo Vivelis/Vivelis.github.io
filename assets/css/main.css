@@ -41,6 +41,7 @@
     --muted-text: var(--ctp-subtext0);
     --accent-text: var(--ctp-teal);
     --heading-text: var(--ctp-lavender);
+    --reverse-text: var(--ctp-base);
 
     --border-color: var(--ctp-surface2);
     --hover-color: var(--ctp-surface1);
@@ -79,13 +80,19 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--heading-text);
     font-weight: 600;
     line-height: 1.2;
 }
 
-code, pre {
+code,
+pre {
     font-family: var(--font-mono);
 }
 
@@ -140,6 +147,10 @@ a:hover {
 
 .text-heading {
     color: var(--heading-text);
+}
+
+.text-reverse {
+    color: var(--reverse-text);
 }
 
 .border-default {
@@ -269,6 +280,7 @@ a:hover {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -279,6 +291,7 @@ a:hover {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
