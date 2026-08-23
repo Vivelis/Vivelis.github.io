@@ -42,6 +42,7 @@ const statusUrl = config.public.uptimeKumaUrl;
             class="homelab-iframe"
             style="color-scheme: dark;"
             loading="lazy"
+            tabindex="-1"
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
             scrolling="auto"
           />
