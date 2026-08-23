@@ -50,7 +50,7 @@ function onIframeError(id) {
             class="animate__animated animate__fadeInUp card group featured-card"
             :style="{ animationDelay: `${0.2 * index + 0.3}s` }">
             <div class="flex flex-col h-full">
-              <div class="flex-1">
+              <div class="flex-1 flex flex-col">
                 <div class="flex items-center justify-between mb-3">
                   <h4 class="text-2xl font-bold text-heading">{{ project[locale].title }}</h4>
                   <span class="text-xs uppercase font-semibold px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">
@@ -60,7 +60,7 @@ function onIframeError(id) {
                 <p class="text-secondary text-base md:text-lg mb-6 leading-relaxed">{{ project[locale].description }}</p>
 
                 <!-- Preview: iframe when demo exists, fallback to image on error -->
-                <div v-if="project.image || project.demo" class="project-preview featured-preview mb-6 overflow-hidden rounded-xl">
+                <div v-if="project.image || project.demo" class="project-preview featured-preview mt-auto mb-6 overflow-hidden rounded-xl">
                   <template v-if="project.demo && !iframeErrors[project.id]">
                     <iframe
                       :src="project.demo"
@@ -78,7 +78,7 @@ function onIframeError(id) {
                     v-if="project.image && (!project.demo || iframeErrors[project.id])"
                     :src="project.image"
                     :alt="project[locale].title"
-                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    class="w-full h-full object-cover object-bottom transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               </div>
@@ -112,12 +112,12 @@ function onIframeError(id) {
           <div v-for="project in otherProjects" :key="project.id"
             class="animate__animated animate__fadeInLeft animate__delay-3s card group">
             <div class="flex flex-col h-full">
-              <div class="flex-1">
+              <div class="flex-1 flex flex-col">
                 <h4 class="text-xl font-semibold text-heading mb-3">{{ project[locale].title }}</h4>
                 <p class="text-secondary mb-4 leading-relaxed">{{ project[locale].description }}</p>
 
                 <!-- Preview: iframe when demo exists, fallback to image on error -->
-                <div v-if="project.image || project.demo" class="project-preview mb-4 overflow-hidden rounded-lg">
+                <div v-if="project.image || project.demo" class="project-preview mt-auto mb-4 overflow-hidden rounded-lg">
                   <template v-if="project.demo && !iframeErrors[project.id]">
                     <iframe
                       :src="project.demo"
@@ -135,7 +135,7 @@ function onIframeError(id) {
                     v-if="project.image && (!project.demo || iframeErrors[project.id])"
                     :src="project.image"
                     :alt="project[locale].title"
-                    class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                    class="w-full h-48 object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>
