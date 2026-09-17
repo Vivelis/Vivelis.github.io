@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxtjs/i18n"],
   pages: true,
+  routeRules: {
+    "/sitemap.xml": { earlyHints: false },
+  },
   css: ["~/assets/css/main.css", "animate.css"],
   vite: {
     plugins: [tailwindcss()],
