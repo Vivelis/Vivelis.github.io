@@ -14,5 +14,6 @@
     "homelab-component-status-title": "État des services en direct",
     "homelab-component-status-link": "Ouvrir dans Uptime Kuma",
     "footer-component-title": "Tous droits réservés.",
+    "footer-component-sitemap": "Plan du site",
     "loading": "Chargement..."
 }

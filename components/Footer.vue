@@ -1,5 +1,5 @@
 <script setup>
-import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-vue';
+import { IconBrandGithub, IconBrandLinkedin, IconSitemap } from '@tabler/icons-vue';
 
 const socialLinks = ref([
   { name: 'GitHub', url: 'https://github.com/Vivelis', icon: IconBrandGithub },
@@ -22,9 +22,20 @@ const socialLinks = ref([
             <component :is="link.icon" class="icon" />
           </a>
         </div>
-        <p class="text-muted text-sm">
-          &copy; {{ new Date().getFullYear() }} {{ $t('footer-component-title') }}
-        </p>
+        <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-muted text-sm">
+          <span>&copy; {{ new Date().getFullYear() }} {{ $t('footer-component-title') }}</span>
+          <span>&bull;</span>
+          <a
+            href="/sitemap.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-muted hover:text-accent transition-colors duration-200 inline-flex items-center gap-1"
+            :aria-label="$t('footer-component-sitemap')"
+          >
+            <IconSitemap class="w-4 h-4" />
+            <span>{{ $t('footer-component-sitemap') }}</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>

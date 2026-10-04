@@ -14,5 +14,6 @@
     "homelab-component-status-title": "Live service status",
     "homelab-component-status-link": "Open in Uptime Kuma",
     "footer-component-title": "All rights reserved.",
+    "footer-component-sitemap": "Sitemap",
     "loading": "Loading..."
 }
