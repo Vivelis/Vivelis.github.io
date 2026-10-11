@@ -24,17 +24,17 @@ const closeMenu = () => {
         
         <!-- Right side (Links + Language Switcher + Mobile menu) -->
         <div class="flex items-center space-x-3 md:space-x-6">
-          <!-- Navigation Links (same place as before) -->
+          <!-- Navigation Links -->
           <div class="hidden md:flex items-center space-x-6">
-            <a href="#projects" class="text-secondary hover:text-accent transition-colors duration-200">
+            <NuxtLink :to="localePath('/') + '#projects'" class="text-secondary hover:text-accent transition-colors duration-200">
               {{ $t('projects-component-title') || 'Projects' }}
-            </a>
-            <a href="#homelab" class="text-secondary hover:text-accent transition-colors duration-200">
+            </NuxtLink>
+            <NuxtLink :to="localePath('/') + '#homelab'" class="text-secondary hover:text-accent transition-colors duration-200">
               {{ $t('homelab-component-title') || 'Homelab' }}
-            </a>
-            <a href="#technologies" class="text-secondary hover:text-accent transition-colors duration-200">
+            </NuxtLink>
+            <NuxtLink :to="localePath('/') + '#technologies'" class="text-secondary hover:text-accent transition-colors duration-200">
               {{ $t('technologies-component-title') || 'Technologies' }}
-            </a>
+            </NuxtLink>
           </div>
 
           <!-- Language Switcher (completely on the right) -->
@@ -64,27 +64,27 @@ const closeMenu = () => {
         leave-to-class="transform -translate-y-2 opacity-0"
       >
         <div v-if="isMenuOpen" class="md:hidden pt-4 pb-2 border-t border-default/50 mt-3 flex flex-col space-y-3">
-          <a 
-            href="#projects" 
+          <NuxtLink 
+            :to="localePath('/') + '#projects'" 
             @click="closeMenu" 
             class="text-secondary hover:text-accent font-medium transition-colors duration-200 py-1"
           >
             {{ $t('projects-component-title') || 'Projects' }}
-          </a>
-          <a 
-            href="#homelab" 
+          </NuxtLink>
+          <NuxtLink 
+            :to="localePath('/') + '#homelab'" 
             @click="closeMenu" 
             class="text-secondary hover:text-accent font-medium transition-colors duration-200 py-1"
           >
             {{ $t('homelab-component-title') || 'Homelab' }}
-          </a>
-          <a 
-            href="#technologies" 
+          </NuxtLink>
+          <NuxtLink 
+            :to="localePath('/') + '#technologies'" 
             @click="closeMenu" 
             class="text-secondary hover:text-accent font-medium transition-colors duration-200 py-1"
           >
             {{ $t('technologies-component-title') || 'Technologies' }}
-          </a>
+          </NuxtLink>
         </div>
       </transition>
     </div>

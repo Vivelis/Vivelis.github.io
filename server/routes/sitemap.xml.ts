@@ -29,6 +29,24 @@ export default eventHandler((event) => {
     <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/" />
   </url>
+  <url>
+    <loc>${siteUrl}/legal</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="${siteUrl}/legal" />
+    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/legal" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/legal" />
+  </url>
+  <url>
+    <loc>${siteUrl}/en/legal</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="${siteUrl}/legal" />
+    <xhtml:link rel="alternate" hreflang="en" href="${siteUrl}/en/legal" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${siteUrl}/legal" />
+  </url>
 </urlset>
 `;
 });

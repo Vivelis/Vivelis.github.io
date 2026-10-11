@@ -1,5 +1,7 @@
 <script setup>
-import { IconBrandGithub, IconBrandLinkedin, IconSitemap } from '@tabler/icons-vue';
+import { IconBrandGithub, IconBrandLinkedin, IconSitemap, IconScale } from '@tabler/icons-vue';
+
+const localePath = useLocalePath();
 
 const socialLinks = ref([
   { name: 'GitHub', url: 'https://github.com/Vivelis', icon: IconBrandGithub },
@@ -24,6 +26,15 @@ const socialLinks = ref([
         </div>
         <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-muted text-sm">
           <span>&copy; {{ new Date().getFullYear() }} {{ $t('footer-component-title') }}</span>
+          <span>&bull;</span>
+          <NuxtLink
+            :to="localePath('/legal')"
+            class="text-muted hover:text-accent transition-colors duration-200 inline-flex items-center gap-1"
+            :aria-label="$t('footer-component-legal')"
+          >
+            <IconScale class="w-4 h-4" />
+            <span>{{ $t('footer-component-legal') }}</span>
+          </NuxtLink>
           <span>&bull;</span>
           <a
             href="/sitemap.xml"
