@@ -14,7 +14,6 @@ export default eventHandler((event) => {
     "",
     "# Zones techniques à ne pas indexer",
     "Disallow: /api/",
-    "Disallow: /_nuxt/",
     "Disallow: /admin/",
     "Disallow: /preview/",
     "",

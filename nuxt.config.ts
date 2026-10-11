@@ -80,7 +80,6 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "apple-touch-icon", href: "/favicon.svg" },
-        { rel: "canonical", href: siteUrl },
         { rel: "manifest", href: "/site.webmanifest" },
         { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
       ],
@@ -116,9 +115,10 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
+    baseUrl: siteUrl,
     locales: [
-      { code: "fr", name: "Français", file: "fr.json" },
-      { code: "en", name: "English", file: "en.json" },
+      { code: "fr", language: "fr-FR", name: "Français", file: "fr.json" },
+      { code: "en", language: "en-US", name: "English", file: "en.json" },
     ],
     defaultLocale: "fr",
     lazy: true,
