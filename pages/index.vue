@@ -1,12 +1,14 @@
 <script setup lang="ts">
 const { t } = useI18n();
+// The "|" stays outside t(): vue-i18n treats it as a plural separator.
+const pageTitle = () => `Macéo Jalbert | ${t('home-meta-title')}`;
 
 useSeoMeta({
-  title: () => t('home-meta-title'),
+  title: pageTitle,
   description: () => t('home-meta-description'),
-  ogTitle: () => t('home-meta-title'),
+  ogTitle: pageTitle,
   ogDescription: () => t('home-meta-description'),
-  twitterTitle: () => t('home-meta-title'),
+  twitterTitle: pageTitle,
   twitterDescription: () => t('home-meta-description'),
 });
 </script>
