@@ -15,12 +15,8 @@ const close = () => {
   isOpen.value = false;
 };
 
-const getTargetLocalePath = (code: string) => {
-  if (code === 'fr') {
-    return '/fr';
-  }
-  return switchLocalePath(code);
-};
+// "/" for French (default locale), "/en/..." for English.
+const getTargetLocalePath = (code: string) => switchLocalePath(code);
 
 onMounted(() => {
   const handleClickOutside = (event: MouseEvent) => {

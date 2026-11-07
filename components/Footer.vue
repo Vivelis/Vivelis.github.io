@@ -1,5 +1,5 @@
 <script setup>
-import { IconBrandGithub, IconBrandLinkedin, IconSitemap, IconScale } from '@tabler/icons-vue';
+import { IconBrandGithub, IconBrandLinkedin, IconScale } from '@tabler/icons-vue';
 
 const localePath = useLocalePath();
 
@@ -35,17 +35,6 @@ const socialLinks = ref([
             <IconScale class="w-4 h-4" />
             <span>{{ $t('footer-component-legal') }}</span>
           </NuxtLink>
-          <span>&bull;</span>
-          <a
-            href="/sitemap.xml"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-muted hover:text-accent transition-colors duration-200 inline-flex items-center gap-1"
-            :aria-label="$t('footer-component-sitemap')"
-          >
-            <IconSitemap class="w-4 h-4" />
-            <span>{{ $t('footer-component-sitemap') }}</span>
-          </a>
         </div>
       </div>
     </div>

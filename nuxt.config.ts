@@ -22,6 +22,9 @@ export default defineNuxtConfig({
   pages: true,
   routeRules: {
     "/sitemap.xml": { earlyHints: false },
+    // Old French-prefixed URLs (strategy used to be prefix_and_default)
+    "/fr": { redirect: { to: "/", statusCode: 301 } },
+    "/fr/**": { redirect: { to: "/**", statusCode: 301 } },
   },
   css: ["~/assets/css/main.css", "animate.css"],
   vite: {
@@ -29,25 +32,13 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      htmlAttrs: {
-        lang: "fr",
-      },
-      title: "Macéo Jalbert | Développeur & Étudiant en Informatique",
-      titleTemplate: "%s",
+      // Language-specific tags (lang, title, description, og:title,
+      // og:description, og:locale, canonical, hreflang) are set per page
+      // and per locale in app.vue / pages/*.vue, never globally here.
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "author", content: "Macéo Jalbert" },
-        {
-          name: "description",
-          content:
-            "Découvrez le portfolio de Macéo Jalbert, développeur et étudiant en informatique passionné par la création de projets web innovants, l'UX et les technologies modernes.",
-        },
-        {
-          name: "keywords",
-          content:
-            "Macéo Jalbert, développeur, portfolio, étudiant informatique, projets web, Vue, Nuxt, JavaScript, innovation, technologies, création digitale",
-        },
         {
           name: "robots",
           content:
@@ -56,24 +47,10 @@ export default defineNuxtConfig({
         { name: "theme-color", content: "#1e1e2e" },
         { name: "apple-mobile-web-app-capable", content: "yes" },
         { property: "og:type", content: "website" },
-        { property: "og:title", content: "Macéo Jalbert | Développeur & Étudiant en Informatique" },
-        {
-          property: "og:description",
-          content:
-            "Portfolio de Macéo Jalbert, étudiant en informatique et développeur curieux, créatif et passionné par les projets web innovants.",
-        },
-        { property: "og:url", content: siteUrl },
         { property: "og:site_name", content: "Macéo Jalbert - Portfolio" },
-        { property: "og:locale", content: "fr_FR" },
         { property: "og:image", content: `${siteUrl}/logo.svg` },
         { property: "og:image:alt", content: "Macéo Jalbert portfolio" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "Macéo Jalbert | Développeur & Étudiant en Informatique" },
-        {
-          name: "twitter:description",
-          content:
-            "Portfolio de Macéo Jalbert, étudiant en informatique et développeur curieux, créatif et passionné par les projets web innovants.",
-        },
         { name: "twitter:image", content: `${siteUrl}/logo.svg` },
         { name: "twitter:image:alt", content: "Macéo Jalbert portfolio" },
       ],
@@ -123,14 +100,11 @@ export default defineNuxtConfig({
     defaultLocale: "fr",
     lazy: true,
     langDir: "locales/",
-    strategy: "prefix_and_default",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root",
-      alwaysRedirect: false,
-      fallbackLocale: "fr",
-    },
+    // "/" = French (default), "/en" = English. No "/fr" duplicate of "/".
+    strategy: "prefix_except_default",
+    // No automatic language redirect: each URL always serves the same
+    // language, which is what Google expects for hreflang pages.
+    detectBrowserLanguage: false,
     bundle: {
       optimizeTranslationDirective: false,
     },
